@@ -1,0 +1,17 @@
+---
+name: Run AllStar Policy Check
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deployment:
+    runs-on: ghcr.io/ossf/allstar:v3.0
+    environment: prod
+    steps:
+      - name: Run Once
+        run: |
+          once
+
