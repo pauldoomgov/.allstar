@@ -1,8 +1,7 @@
-# Outside contributor policies
+# Scorecard Check - Risky GitHub Action detector
 optConfig:
   disableRepoOverride: true
   optOutStrategy: true
 action: issue
 # Policies
-adminAllowed: false
-pushAllowed: false
+
