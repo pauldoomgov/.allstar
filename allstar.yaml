@@ -1,4 +1,7 @@
 optConfig:
-  disableRepoOverride: true
-  optOutStrategy: true
-issueRepo: product
+  #disableRepoOverride: true
+  optOutStrategy: false
+  optInRepos:
+  - .allstar
+  - clubfed
+issueRepo: .allstar
