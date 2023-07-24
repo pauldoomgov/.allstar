@@ -8,7 +8,8 @@ on:
 
 jobs:
   deployment:
-    runs-on: ghcr.io/ossf/allstar:v3.0
+    runs-on: ubuntu-latest
+    container: ghcr.io/ossf/allstar:v3.0
     environment: prod
     steps:
       - name: Run Once
