@@ -13,6 +13,5 @@ jobs:
     environment: prod
     steps:
       - name: Run Once
-        run: |
-          once
+        run: /ko-app/allstar once
 
