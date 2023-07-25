@@ -1,6 +1,6 @@
 # Allstar configuration for pauldoomgov
 
-![AllStar Run](https://github.com/pauldoomgov/allstar-control/actions/workflows/allstar-run.yml/badge.svg)
+![AllStar Run](https://github.com/pauldoomgov/.allstar/actions/workflows/allstar-run.yml/badge.svg)
 
 [Allstar](https://github.com/pauldoomgov/.allstar) is a security-policy GitHub app. It is
 installed on this org, and this repo contains the configuration for that app. It
