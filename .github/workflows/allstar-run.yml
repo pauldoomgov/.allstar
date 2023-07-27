@@ -9,7 +9,8 @@ on:
 jobs:
   deployment:
     runs-on: ubuntu-latest
-    container: ghcr.io/ossf/allstar:v3.0
+    # Use my chainguard/busybox based image - It has a tail.
+    container: ghcr.io/pauldoomgov/allstar:v3.0-busy
     environment: prod
     steps:
       - name: Run Once
