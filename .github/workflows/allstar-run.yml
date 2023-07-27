@@ -19,4 +19,3 @@ jobs:
           KEY_SECRET: ${{ vars.KEY_SECRET }}
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
         run: /ko-app/allstar once
-        env:
