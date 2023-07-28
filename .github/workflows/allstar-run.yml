@@ -18,4 +18,4 @@ jobs:
           APP_ID: ${{ vars.APP_ID }}
           KEY_SECRET: ${{ vars.KEY_SECRET }}
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-        run: /ko-app/allstar once
+        run: /ko-app/allstar -once
