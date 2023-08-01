@@ -1,21 +1,21 @@
 ---
-name: Run AllStar Policy Check
+name: AllStar Enforcement Action
 
 on:
   push:
     branches:
       - main
   schedule:
-    - cron: '7,37 * * * *'
+    - cron: '5 * * * *'
 
 jobs:
   deployment:
     runs-on: ubuntu-latest
     # Use my chainguard/busybox based image - It has a tail.
-    container: ghcr.io/pauldoomgov/allstar:v3.0-busy
+    container: ghcr.io/ossf/allstar:v4.0-busybox
     environment: prod
     steps:
-      - name: Run Once
+      - name: AllStar Enforce
         env:
           APP_ID: ${{ vars.APP_ID }}
           KEY_SECRET: ${{ vars.KEY_SECRET }}
