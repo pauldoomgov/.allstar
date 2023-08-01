@@ -1,6 +1,4 @@
 optConfig:
-  #disableRepoOverride: true
-  optOutStrategy: false
   optInRepos:
   - .allstar
   - clubfed
