@@ -1,4 +1,5 @@
-optConfig:
+optConfi:
+  chunks: true
   optInRepos:
   - .allstar
   - clubfed
