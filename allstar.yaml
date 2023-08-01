@@ -1,5 +1,6 @@
-optConfi:
-  chunks: true
+optConfig:
+  optOutStrategy: false
+  disableRepoOverride: true
   optInRepos:
   - .allstar
   - clubfed
