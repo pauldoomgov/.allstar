@@ -2,7 +2,7 @@
 optConfig:
   disableRepoOverride: true
   optOutStrategy: true
-action: fix
+action: issue
 # Policies
 ownerlessAllowed: false
 userAdminsAllowed: true
