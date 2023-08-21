@@ -1,0 +1,8 @@
+# Outside contributor policies
+optConfig:
+  disableRepoOverride: true
+  optOutStrategy: true
+action: issue
+# Policies
+adminAllowed: false
+pushAllowed: false

@@ -1,0 +1,6 @@
+optConfig:
+  optOutStrategy: false
+  disableRepoOverride: true
+  optInRepos:
+  - .allstar
+# issueRepo: .allstar

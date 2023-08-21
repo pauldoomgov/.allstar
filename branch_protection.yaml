@@ -1,0 +1,14 @@
+# Branch protection rules
+optConfig:
+  #disableRepoOverride: true
+  optOutStrategy: true
+action: issue
+# Policies
+enforceDefault: true
+requireApproval: true
+requireUpToDateBranch: true
+approvalCount: 1
+dismissStale: true
+blockForce: true
+requireSignedCommits: true
+enforceOnAdmins: true
