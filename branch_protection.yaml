@@ -2,7 +2,7 @@
 optConfig:
   #disableRepoOverride: true
   optOutStrategy: true
-action: fix
+action: issue
 # Policies
 enforceDefault: true
 requireApproval: true

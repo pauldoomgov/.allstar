@@ -7,9 +7,15 @@ installed on this org, and this repo contains the configuration for that app. It
 is configured to create issues on repos that do not comply with the configured
 policy.
 
+AllStar is set to "complain mode" at this time and can not auto-remediate issues.
+
 ## Enabled Repos
 
-AllStar is currently configured to opt-in. Feel free to submit a PR to add repos.
+AllStar is currently configured to opt-in. If you have a repository in this
+organization that you would like added:
+
+* Open a PR that modifies `allstar.yaml` to include your repository
+* Once accepted and merged, check the `Issues` tab in your repository for AllStar's findings
 
 ## Policy Configuration
 
@@ -77,4 +83,8 @@ for current settings.
 ## [SECURITY.md check](security.yaml)
 
 Each repository is required to have a security policy published as `SECURITY.md`.
+GSA developed open source software should be covered by the
+[GSA Vulnerability Disclosure Policy](https://gsa.gov/vulnerability-disclosure-policy).
 
+In most cases you should be able to use [SECURITY.md](./SECURITY.md) from this
+repo.

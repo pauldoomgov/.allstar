@@ -4,4 +4,4 @@ optConfig:
   optInRepos:
   - .allstar
   - clubfed
-issueRepo: .allstar
+# issueRepo: .allstar
