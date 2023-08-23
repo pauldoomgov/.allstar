@@ -1,12 +1,15 @@
 ---
 name: AllStar Enforcement Action
 
+# See https://github.com/GSA-TTS/.allstar/blob/main/ADMIN.md for information
+# on setup and administration of this GHA.
+
 on:
   push:
     branches:
       - main
   schedule:
-    - cron: '5 * * * *'
+    - cron: '7 * * * *'
 
 jobs:
   deployment:
@@ -17,7 +20,7 @@ jobs:
     steps:
       - name: Run AllStar Policy Check
         env:
+          KEY_SECRET: direct
           APP_ID: ${{ vars.APP_ID }}
-          KEY_SECRET: ${{ vars.KEY_SECRET }}
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
         run: /ko-app/allstar -once
