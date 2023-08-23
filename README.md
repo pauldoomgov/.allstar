@@ -80,7 +80,7 @@ Runs [Scorecard](https://github.com/ossf/scorecard/) to detect and report a
 wide variety of problems. See the [default checks.yaml](https://github.com/ossf/scorecard/blob/main/docs/checks/internal/checks.yaml)
 for current settings.
 
-## [SECURITY.md check](security.yaml)
+### [SECURITY.md check](security.yaml)
 
 Each repository is required to have a security policy published as `SECURITY.md`.
 GSA developed open source software should be covered by the
@@ -88,3 +88,8 @@ GSA developed open source software should be covered by the
 
 In most cases you should be able to use [SECURITY.md](./SECURITY.md) from this
 repo.
+
+## AllStar Administration
+
+See [ADMIN.md](./ADMIN.md) if you are a GSA-TTS administrator managing AllStar.
+
