@@ -1,6 +1,9 @@
 optConfig:
   optOutStrategy: false
   disableRepoOverride: true
-  optInRepos:
+  # issueRepo: .allstar
+  optInRepos: # A sorted list of repos under GSA-TTS to check with AllStar
   - .allstar
-# issueRepo: .allstar
+  - 10x-sandbox-api
+  - tts.gsa.gov
+
