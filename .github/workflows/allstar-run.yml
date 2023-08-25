@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: Run AllStar Policy Check
         env:
+          # Ping open issues every week (168 hours)
+          NOTICE_PING_DURATION_HOURS: 168
           KEY_SECRET: direct
           APP_ID: ${{ vars.APP_ID }}
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
