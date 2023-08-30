@@ -5,6 +5,11 @@ optConfig:
   optInRepos: # A sorted list of repos under GSA-TTS to check with AllStar
   - .allstar
   - 10x-sandbox-api
+  - cg-egress-proxy
+  - cg-logshipper
+  - datagov-brokerpack-eks
+  - datagov-brokerpack-smtp
+  - datagov-brokerpack-solr
   - FAC
   - tts.gsa.gov
 
