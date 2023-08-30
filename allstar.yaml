@@ -5,5 +5,6 @@ optConfig:
   optInRepos: # A sorted list of repos under GSA-TTS to check with AllStar
   - .allstar
   - 10x-sandbox-api
+  - FAC
   - tts.gsa.gov
 
