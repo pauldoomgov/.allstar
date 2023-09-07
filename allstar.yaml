@@ -2,14 +2,15 @@ optConfig:
   optOutStrategy: false
   disableRepoOverride: true
   # issueRepo: .allstar
-  optInRepos: # A sorted list of repos under GSA-TTS to check with AllStar
+  optInRepos:
+  # A sorted list of repos under GSA-TTS to check with AllStar
   - .allstar
   - 10x-sandbox-api
   - cg-egress-proxy
   - cg-logshipper
-  - datagov-brokerpack-eks
-  - datagov-brokerpack-smtp
-  - datagov-brokerpack-solr
+  - datagov-brokerpak-eks
+  - datagov-brokerpak-smtp
+  - datagov-brokerpak-solr
   - FAC
   - tts.gsa.gov
 
