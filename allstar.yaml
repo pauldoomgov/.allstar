@@ -4,4 +4,5 @@ optConfig:
   optInRepos:
   - .allstar
   - clubfed
+  - not-tts.gsa.gov
 # issueRepo: .allstar
