@@ -11,6 +11,7 @@ optConfig:
   - datagov-brokerpak-eks
   - datagov-brokerpak-smtp
   - datagov-brokerpak-solr
+  - devtools-program
   - FAC
   - identity-idva-docs
   - tts.gsa.gov
