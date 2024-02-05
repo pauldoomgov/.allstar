@@ -5,7 +5,6 @@ optConfig:
 action: issue
 # Policies
 ownerlessAllowed: false
-userAdminsAllowed: true
-maxNumberUserAdmins: 4
+userAdminsAllowed: false
 teamAdminsAllowed: true
 maxNumberAdminTeams: 2
