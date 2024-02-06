@@ -1,10 +1,7 @@
 optConfig:
-optNotwhatever >> HI MOM!!!!
-
   optOutStrategy: false
   disableRepoOverride: true
   optInRepos:
-  not a list item
   - .allstar
   - clubfed
   - not-tts.gsa.gov
