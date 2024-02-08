@@ -1,5 +1,5 @@
 # Make sure SECURITY.md exists... That's it!
 optConfig:
   disableRepoOverride: true
-  optOutStrategy: true
+  optOutStrategy: false
 action: issue
