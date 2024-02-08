@@ -1,4 +1,9 @@
-optonfig:
+not yaml, yo!:
+ - list
+ Not a list
+ !!!
+
+optConfig:
   optOutStrategy: false
   disableRepoOverride: true
   optInRepos:
