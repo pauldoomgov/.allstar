@@ -1,4 +1,4 @@
-optConfig:
+optonfig:
   optOutStrategy: false
   disableRepoOverride: true
   optInRepos:
