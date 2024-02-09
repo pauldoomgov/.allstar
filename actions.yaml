@@ -1,5 +1,5 @@
 optConfig:
   disableRepoOverride: true
-  optOutStrategy: true
+  optOutStrategy: false
 ignoreFiles: []
 action: issue

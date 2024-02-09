@@ -2,7 +2,7 @@
 optConfig:
   # Allowing per-repo overrides for needed in-repo binaries
   disableRepoOverride: false
-  optOutStrategy: true
+  optOutStrategy: false
 action: issue
 # Policies
 ignoreFiles: []
