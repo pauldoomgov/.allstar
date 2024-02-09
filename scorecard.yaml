@@ -1,7 +1,7 @@
 # Scorecard Policy - See https://github.com/ossf/scorecard/blob/main/docs/checks.md
 optConfig:
   disableRepoOverride: true
-  optOutStrategy: true
+  optOutStrategy: false
 action: issue
 # Policies
 # Starting with the defaults - https://github.com/ossf/scorecard/blob/main/docs/checks/internal/checks.yaml
