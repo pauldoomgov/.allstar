@@ -2,6 +2,10 @@
 optConfig:
   #disableRepoOverride: true
   optOutStrategy: false
+  optInRepos:
+  - .allstar
+  - clubfed
+  - not-tts.gsa.gov
 action: issue
 # Policies
 enforceDefault: true
