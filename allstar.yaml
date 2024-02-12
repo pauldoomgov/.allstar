@@ -1,3 +1,11 @@
+# AllStar's GitHub configuration enforcement supports
+# the following controls:
+# CA-6 Authorization 
+#    "c.1. Accepts the use of common controls inherited by the system"
+# CM-2 Baseline Configuration
+# CM-2(2) Baseline Configuration | Automation Support for Accuracy and Currency
+# See supporting .yaml files for: 
+# AC-2,AC-3, AC-5, AC-6, AC-14, RA-5 (11), SI-3, 
 optConfig:
   optOutStrategy: false
   disableRepoOverride: true
@@ -16,3 +24,5 @@ optConfig:
   - identity-idva-docs
   - tts.gsa.gov
   - touchpoints-site
+issueLabel: allstar-gsa
+issueFooter: "Issued created by [GSA-TTS Allstar](https://github.com/gsa-tts/.allstar)"
