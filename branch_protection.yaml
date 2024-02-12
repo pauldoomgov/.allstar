@@ -3,6 +3,7 @@
 #   one other team member for the production “main/master” branch.
 # AC-2 (part k): cans, checks, and branch protection policies are enforced 
 #   configurations through the GSA-TTS Github Allstar implementation.
+# SI-7 Software, Firmware, and Information Integrity
 optConfig:
   #disableRepoOverride: true
   optOutStrategy: true
@@ -14,5 +15,5 @@ requireUpToDateBranch: true
 approvalCount: 1
 dismissStale: true
 blockForce: true
-requireSignedCommits: true
+requireSignedCommits: true # SI-7 
 enforceOnAdmins: true
