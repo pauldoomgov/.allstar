@@ -23,6 +23,7 @@ jobs:
           # Ping open issues every week (168 hours)
           NOTICE_PING_DURATION_HOURS: 168
           DO_NOTHING_ON_OPT_OUT: true # consistent with https://github.com/ossf/allstar/blob/main/app-prod.yaml#L12
+          ALLSTAR_LOG_LEVEL: debug # reset to info (the default) after we get more insight
           KEY_SECRET: direct
           APP_ID: ${{ vars.APP_ID }}
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
