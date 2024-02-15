@@ -5,6 +5,9 @@ optConfig:
   # Allowing per-repo overrides for needed in-repo binaries
   disableRepoOverride: false
   optOutStrategy: true
+  optOutRepos:
+    # A sorted list of repos under GSA-TTS to check with AllStar
+    - InterimPerformance-Dot-Gov-2018
 action: issue
 # Policies
 ignoreFiles: []

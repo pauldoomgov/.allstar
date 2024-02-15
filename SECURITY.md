@@ -22,12 +22,12 @@ at <https://www.gsa.gov/vulnerability-disclosure-policy> for details including:
 
 Certain GSA/TTS programs have bug bounties that are not discussed at the above link. If you find security issues for any of the following domains:
 
-* cloud.gov
-* search.gov
-* usa.gov
 * 18f.gov
+* cloud.gov
 * fedramp.gov
 * login.gov
+* search.gov
+* usa.gov
 * vote.gov
   
 you should also review the [GSA Bug Bounty program](https://hackerone.com/gsa_bbp) at <https://hackerone.com/gsa_bbp/> for a potential bounty.
