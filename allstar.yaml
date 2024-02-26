@@ -21,6 +21,7 @@ optConfig:
   - datagov-brokerpak-solr
   - devtools-program
   - FAC
+  - federal-platform-engineering-cop
   - identity-idva-docs
   - tts.gsa.gov
   - touchpoints-site
