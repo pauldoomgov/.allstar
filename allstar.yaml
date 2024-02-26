@@ -24,5 +24,9 @@ optConfig:
   - identity-idva-docs
   - tts.gsa.gov
   - touchpoints-site
+  - identity-site
+  - identity-handbook
+  - identity-dev-docs
+  - identity-reporting
 issueLabel: allstar-gsa
 issueFooter: "Issued created by [GSA-TTS Allstar](https://github.com/gsa-tts/.allstar)"
