@@ -6,8 +6,6 @@ optConfig:
   disableRepoOverride: false
   optOutStrategy: true
   optOutRepos:
-    # A sorted list of repos under GSA to optout from binary check
-    - InterimPerformance-Dot-Gov-2018
-action: issue
+action: log
 # Policies
 ignoreFiles: []
