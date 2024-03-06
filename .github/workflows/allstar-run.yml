@@ -18,6 +18,8 @@ jobs:
     container: ghcr.io/ossf/allstar:v4.0-busybox
     environment: prod
     steps:
+      - name: Create Artifact Directoy
+        run: mkdir /home/nonroot/artifacts
       - name: Run AllStar Policy Check
         env:
           # Ping open issues every week (168 hours)
@@ -27,4 +29,10 @@ jobs:
           KEY_SECRET: direct
           APP_ID: ${{ vars.APP_ID }}
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-        run: /ko-app/allstar -once
+        run: /ko-app/allstar -once | tee /home/nonroot/artifacts/allstar-report.txt
+      - name: Archive AllStar Results
+        uses: actions/upload-artifact@v4
+        with:
+          name: allstar-artifacts
+          path: /home/nonroot/artifacts/
+
