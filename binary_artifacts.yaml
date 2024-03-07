@@ -5,6 +5,7 @@ optConfig:
   # Allowing per-repo overrides for needed in-repo binaries
   disableRepoOverride: false
   optOutStrategy: true
-action: issue
+  optOutRepos:
+action: log
 # Policies
 ignoreFiles: []
