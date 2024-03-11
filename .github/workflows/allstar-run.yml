@@ -31,7 +31,7 @@ jobs:
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
         run: /ko-app/allstar -once | tee /home/nonroot/artifacts/allstar-report.txt
       - name: Archive AllStar Results
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           name: allstar-artifacts
           path: /home/nonroot/artifacts/
