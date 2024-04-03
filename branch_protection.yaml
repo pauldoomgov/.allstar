@@ -9,11 +9,12 @@ optConfig:
   optOutStrategy: true
 action: log
 # Policies
-enforceDefault: true
-requireApproval: true
-requireUpToDateBranch: true
 approvalCount: 1
-dismissStale: true
 blockForce: true
-requireSignedCommits: true # SI-7 
+dismissStale: true
+enforceDefault: true
 enforceOnAdmins: true
+optOutArchivedRepos: true  
+requireApproval: true
+requireSignedCommits: true # SI-7 
+requireUpToDateBranch: true
