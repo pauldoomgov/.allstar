@@ -44,7 +44,7 @@ jobs:
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
         # AllStar emits logs on stderr, not stdout
         run: | 
-          /ko-app/allstar -once > >(tee -a $ARTIFACT_DIR/stdout.log) 2> >(tee -a $ARTIFACT_DIR/stderr.log >&2);
+          /ko-app/allstar -once > >(tee -a $ARTIFACT_DIR/allstar.out) 2> >(tee -a $ARTIFACT_DIR/allstar.log >&2);
       - name: Archive AllStar Results
         uses: actions/upload-artifact@5d5d22a31266ced268874388b861e4b58bb5c2f3 # @4.3.1
         with:
