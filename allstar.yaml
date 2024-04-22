@@ -7,27 +7,7 @@
 # See supporting .yaml files for: 
 # AC-2,AC-3, AC-5, AC-6, AC-14, RA-5 (11), SI-3, 
 optConfig:
-  optOutStrategy: false
-  disableRepoOverride: true
-  # issueRepo: .allstar
-  optInRepos:
-  # A sorted list of repos under GSA-TTS to check with AllStar
-  - .allstar
-  - 10x-sandbox-api
-  - cg-egress-proxy
-  - cg-logshipper
-  - datagov-brokerpak-eks
-  - datagov-brokerpak-smtp
-  - datagov-brokerpak-solr
-  - devtools-program
-  - FAC
-  - federal-platform-engineering-cop
-  - identity-idva-docs
-  - tts.gsa.gov
-  - touchpoints-site
-  - identity-site
-  - identity-handbook
-  - identity-dev-docs
-  - identity-reporting
+  disableRepoOverride: false
+  optOutStrategy: true
 issueLabel: allstar-gsa
-issueFooter: "Issued created by [GSA-TTS Allstar](https://github.com/gsa-tts/.allstar)"
+issueFooter: "Issue created by [GSA-TTS Allstar](https://github.com/gsa-tts/.allstar)"
