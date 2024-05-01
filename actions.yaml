@@ -1,5 +1,5 @@
 optConfig:
-  disableRepoOverride: true
+  disableRepoOverride: false
   optOutStrategy: true
 ignoreFiles: []
 action: log

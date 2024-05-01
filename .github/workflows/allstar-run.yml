@@ -1,8 +1,8 @@
 # We could verify the AllStar image with something like:
 #   cosign verify ghcr.io/ossf/allstar:v4.0-busybox \
-#     --certificate-identity-regexp  "https://github.com/ossf/allstar/.github/workflows/release.yaml"  
+#     --certificate-identity-regexp  "https://github.com/ossf/allstar/.github/workflows/release.yaml"
 #     --certificate-oidc-issuer https://token.actions.githubusercontent.com
-# but it's a fairly uninteresting verification since it only shows the image was 
+# but it's a fairly uninteresting verification since it only shows the image was
 # generated through GitHub Actions, not signed by one of the committers.
 # More: https://github.blog/2021-12-06-safeguard-container-signing-capability-actions/
 ---
@@ -25,13 +25,12 @@ jobs:
   scan:
     runs-on: ubuntu-latest
     # Use chainguard/busybox based image - It has a tail for entrypoint
-    container: 
+    container:
       # specifying allstar by sha since tags are mutable. we don't verify the signature (see above)
       image: ghcr.io/ossf/allstar@sha256:1f3b9d7bf8490f17f1c114781085a92124e187c7e59db53b1e8a996d85c36445 # v4.0-busybox
       # Running as root within unprivileged container does not violate STIGs, etc.
       options: --user root
     environment: prod
-    
     steps:
       - name: Create Artifact Directory
         run: mkdir $ARTIFACT_DIR
@@ -45,10 +44,10 @@ jobs:
           APP_ID: ${{ vars.APP_ID }}
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
         # AllStar emits logs on stderr, not stdout
-        run: | 
+        run: |
           /ko-app/allstar -once > >(tee -a $ARTIFACT_DIR/allstar.out) 2> >(tee -a $ARTIFACT_DIR/allstar.log >&2);
       - name: Archive AllStar Results
-        uses: actions/upload-artifact@5d5d22a31266ced268874388b861e4b58bb5c2f3 # @4.3.1  
+        uses: actions/upload-artifact@5d5d22a31266ced268874388b861e4b58bb5c2f3 # @4.3.1
         with:
           name: allstar-scan
           path: ${{ env.ARTIFACT_DIR }}
@@ -66,7 +65,7 @@ jobs:
         run: mkdir $ARTIFACT_DIR
       - name: Summarize Results by Check
         run: |
-          grep '^{' $GITHUB_WORKSPACE/allstar.log | 
+          grep '^{' $GITHUB_WORKSPACE/allstar.log |
             jq --slurp '[.[] | select(.enabled == true and .message == "Policy run result.") ] |
               group_by(.area) | map({
                 area: .[0].area,
@@ -74,12 +73,12 @@ jobs:
                   pass_count: map(select(.result == true)) | length,
                   fail_count: map(select(.result == false)) | length,
                   passed: map(select(.result == true)| .repo),
-                  failed: map(select(.result == false)| .repo)
+                  failed: map(select(.result == false)|
                 }})' |
             tee $ARTIFACT_DIR/scan_results_by_check.json
       - name: Summarize Results by Repository
         run: |
-          grep '^{' $GITHUB_WORKSPACE/allstar.log | 
+          grep '^{' $GITHUB_WORKSPACE/allstar.log |
             jq --slurp '[.[] | select(.enabled == true and .message == "Policy run result.") ] |
               group_by(.repo) | map({
                 repository: .[0].repo,
@@ -89,10 +88,10 @@ jobs:
                   passed: map(select(.result == true)| .area),
                   failed: map(select(.result == false)| .area)
                 }
-              })' | 
-            tee $ARTIFACT_DIR/scan_results_by_repo.json      
+              })' |
+            tee $ARTIFACT_DIR/scan_results_by_repo.json
       - name: Archive AllStar Results
-        uses: actions/upload-artifact@5d5d22a31266ced268874388b861e4b58bb5c2f3 # @4.3.1  
+        uses: actions/upload-artifact@5d5d22a31266ced268874388b861e4b58bb5c2f3 # @4.3.1
         with:
           name: allstar-results
           path: ${{ env.ARTIFACT_DIR }}

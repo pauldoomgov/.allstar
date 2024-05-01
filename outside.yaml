@@ -4,7 +4,7 @@
 # AC-14: Permitted Actions Without Identification or Authentication
 # 
 optConfig:
-  disableRepoOverride: true
+  disableRepoOverride: false
   optOutStrategy: true
 action: log
 # Policies
