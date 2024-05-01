@@ -5,7 +5,7 @@
 #   configurations through the GSA-TTS Github Allstar implementation.
 # SI-7 Software, Firmware, and Information Integrity
 optConfig:
-  #disableRepoOverride: true
+  disableRepoOverride: false
   optOutStrategy: true
 action: log
 # Policies

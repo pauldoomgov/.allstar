@@ -4,4 +4,16 @@ optConfig:
   optOutStrategy: true
 action: log
 # Policies
-# Starting with the defaults - https://github.com/ossf/scorecard/blob/main/docs/checks/internal/checks.yaml
+# This are documented here: https://github.com/ossf/scorecard/blob/main/docs/checks/internal/checks.yaml
+# Checks need to be explicitly defined. AllStar already calls scorecard tfor 
+# Binary-Artifacts, and Dangerous-Workflow
+# and has its own implementation of Branch-Protection
+
+# The other Critical or High checks are
+# - Code-Review, Dependency-Update-Tool, Maintained
+# - Signed-Releases, Token-Permissions, Vulnerabilities
+# - Webhooks (experimental)
+# We are not using any explicit checks at this time
+#checks: # AllStar already call scorecard for Binary-Artifacts, Branch-Protection,
+  - Code-Review
+  - Maintained

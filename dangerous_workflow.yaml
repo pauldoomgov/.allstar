@@ -1,6 +1,6 @@
 # Scorecard Check - Risky GitHub Action detector
 optConfig:
-  disableRepoOverride: true
+  disableRepoOverride: false
   optOutStrategy: true
 action: log
 # Policies

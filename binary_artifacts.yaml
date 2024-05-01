@@ -2,10 +2,8 @@
 # Partial implementation of 
 # SI-3: Malicious Code Protection
 optConfig:
-  # Allowing per-repo overrides for needed in-repo binaries
   disableRepoOverride: false
   optOutStrategy: true
-  optOutRepos:
 action: log
 # Policies
 ignoreFiles: []
