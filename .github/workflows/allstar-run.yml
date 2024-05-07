@@ -27,7 +27,7 @@ jobs:
     # Use chainguard/busybox based image - It has a tail for entrypoint
     container:
       # specifying allstar by sha since tags are mutable. we don't verify the signature (see above)
-      image: ghcr.io/ossf/allstar@sha256:1f3b9d7bf8490f17f1c114781085a92124e187c7e59db53b1e8a996d85c36445 # v4.0-busybox
+      image: ghcr.io/ossf/allstar@sha256:b9a32c3f54f3e96aa06003eb48acb9d4c32a70b5ec49bdc4f91b942b32b14969 # v4.1-busybox
       # Running as root within unprivileged container does not violate STIGs, etc.
       options: --user root
     environment: prod
