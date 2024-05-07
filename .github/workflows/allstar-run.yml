@@ -74,7 +74,7 @@ jobs:
                   fail_count: map(select(.result == false)) | length,
                   passed: map(select(.result == true)| .repo),
                   failed: map(select(.result == false)|
-                }})' |
+                })' |
             tee $ARTIFACT_DIR/scan_results_by_check.json
       - name: Summarize Results by Repository
         run: |
