@@ -35,15 +35,11 @@ with GitHub:
 __Do not give AllStar full organization access!__
 
 To add a new opt-in repo:
-* Make sure there is an open PR that updated `allstar.yml` to include the repo.
-  We need to ensure the repos that AllStar has access to and `allstar.yml` stay
-  aligned.
 * As a [GSA-TTS owner](https://github.com/orgs/GSA-TTS/people?query=role%3Aowner),
   navigate to [Settings -> GitHub Apps -> gsa-tts-allstar](https://github.com/organizations/GSA-TTS/settings/installations/40988991)
 * Under "Repository access" use the "Select repositories" drop down to add
   repos for AllStar to monitor
 * Click Save
-* Merge the PR that updates `allstar.yml` with the new repo
 
 ## AllStar GitHub Action
 
