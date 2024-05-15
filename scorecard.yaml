@@ -2,7 +2,7 @@
 optConfig:
   disableRepoOverride: true
   optOutStrategy: true
-action: log
+action: issue
 # Policies
 # This are documented here: https://github.com/ossf/scorecard/blob/main/docs/checks/internal/checks.yaml
 # Checks need to be explicitly defined. AllStar already calls scorecard for

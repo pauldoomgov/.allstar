@@ -2,4 +2,4 @@ optConfig:
   disableRepoOverride: false
   optOutStrategy: true
 ignoreFiles: []
-action: log
+action: issue

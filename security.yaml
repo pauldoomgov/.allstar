@@ -3,4 +3,4 @@
 optConfig:
   disableRepoOverride: true
   optOutStrategy: true
-action: log
+action: issue

@@ -9,7 +9,7 @@
 name: GSA-TTS AllStar Enforcement Action
 
 # See https://github.com/GSA-TTS/.allstar/blob/main/ADMIN.md for information
-# on setup and administration of this GHA.
+# on setup and administration of this GitHub Action.
 
 on:
   push:
