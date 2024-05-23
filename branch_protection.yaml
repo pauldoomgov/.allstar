@@ -7,7 +7,7 @@
 optConfig:
   disableRepoOverride: false
   optOutStrategy: true
-action: log
+action: issue
 # Policies
 approvalCount: 1
 blockForce: true
