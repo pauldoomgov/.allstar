@@ -1,0 +1,19 @@
+---
+name: CI Tests
+on:
+  - pull_request
+
+jobs:
+  yamllint:
+    name: yamllint
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # @4.1.6
+      - name: yamllint
+        uses: karancode/yamllint-github-action@fdef6bc189425ecc84cc4543b2674566c0827053 # @2.1.1
+        with:
+          yamllint_strict: false
+          yamllint_format: github
+          yamllint_comment: false
+          yamllint_config_datapath: '{extends: relaxed, rules: {line-length: {max: 120}}}'
