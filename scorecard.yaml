@@ -10,7 +10,7 @@ action: issue
 # and has its own implementation of Branch-Protection
 
 # The other Critical or High checks are:
-# - Code-Review 
+# - Code-Review
 # - Dependency-Update-Tool
 # - Maintained
 # - Signed-Releases
