@@ -1,8 +1,8 @@
 # Outside contributor policies
-# Controls 
+# Controls
 # AC-3: Access Enforcement (?)
 # AC-14: Permitted Actions Without Identification or Authentication
-# 
+#
 optConfig:
   disableRepoOverride: false
   optOutStrategy: true
