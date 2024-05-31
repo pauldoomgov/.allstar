@@ -11,6 +11,6 @@ jobs:
       - name: checkout
         uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # @4.1.6
       - name: yamllint
-        uses: pipeline-components/yamllint@0.16.1
+        uses: pipeline-components/yamllint@041a9352496becdcf5e9d763c9456e13accfddb8 # @v0.16.1
         with:
           options: '--format github --config-data "{extends: relaxed, rules: {line-length: {max: 120}}}"'
