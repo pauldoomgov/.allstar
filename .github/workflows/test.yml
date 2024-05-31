@@ -13,4 +13,4 @@ jobs:
       - name: yamllint
         uses: pipeline-components/yamllint@041a9352496becdcf5e9d763c9456e13accfddb8 # @v0.16.1
         with:
-          options: "--format github --config-data '{extends: relaxed, rules: {line-length: {max: 120}}}'"
+          options: '--format github --config-data \'{extends: relaxed, rules: {line-length: {max: 120}}}\''
