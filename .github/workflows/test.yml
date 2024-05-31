@@ -1,0 +1,15 @@
+---
+name: CI Tests
+on:
+  - pull_request
+
+jobs:
+  yamllint:
+    name: yamllint
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # @4.1.6
+      - name: yamllint
+        uses: pipeline-components/yamllint@041a9352496becdcf5e9d763c9456e13accfddb8 # @v0.16.1
+        # Update .yamllint to adjust rules
