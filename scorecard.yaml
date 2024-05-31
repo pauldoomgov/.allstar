@@ -8,7 +8,7 @@ action: issue
 # Checks need to be explicitly defined. AllStar already calls scorecard for
 # Binary-Artifacts (High), and Dangerous-Workflow (Critical)
 # and has its own implementation of Branch-Protection
-
+#
 # The other Critical or High checks are:
 # - Code-Review
 # - Dependency-Update-Tool
