@@ -52,6 +52,12 @@ Sets the issue labels and issue footers for when AllStar creates issues.
 * AC-5 Least Privilege
 * AC-6 Separation of Duties
 
+**Remediation Hints**:
+
+* Make sure there are redundant owners for your repository.
+* Delegating administrative responsibilities to a team can be more sustainable than having individual admins.
+* If a repo is not in use, consider archiving it.
+
 ### [Binary Artifacts](binary_artifacts.yaml)
 
 No binary files are currently ignored. You should override this policy
@@ -61,6 +67,11 @@ binaries you wish to allow.
 **Compliance**: By ensuring that all content in GitHub is reviewable, this provides a partial implementation of:
 
 * SI-3: Malicious Code Protection
+
+**Remediation Hints**:
+
+* Remove binaries if they can be generated from code
+* List exceptions in `(repository)/.allstar/binary_artifacts.yaml`, as in [this example](https://github.com/google/UIforETW/blob/main/.allstar/binary_artifacts.yaml)
 
 ### [Branch Protection](branch_protection.yaml)
 
@@ -83,6 +94,12 @@ for code to reach `main`.
 
 * AC-2 Access Control:  AllStar is ensuring branch protection is being enforced and requires peer review by at least one other team member for the production “main/master” branch. Scans, checks, and branch protection policies are enforced configurations through the GSA-TTS Github Allstar implementation.
 * SI-7 Software, Firmware, and Information Integrity: Signed commits ensure code updates come from the approved set of contributors.
+
+**Remediation Hints**:
+
+* Follow GitHub's [Branch Protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches) guidance
+* If the org-wide settings aren't appropriate for your repository, override the settings in `(repository)/.allstar/branch_protection.yaml`, as in [this example for the Login handbook](https://github.com/GSA-TTS/identity-handbook/blob/main/.allstar/branch_protection.yaml)
+
 
 ### [Dangerous Action Workflows](dangerous_workflows.yaml)
 
