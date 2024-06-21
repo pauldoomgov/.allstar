@@ -124,9 +124,9 @@ repo.
 
 * RA-5(11): Vulnerability Monitoring and Scanning -- Public Disclosure Program
 
-## Unimplemented check
+## Unimplemented checks
 
-We aren't using the "Github Actions" (`actions.yaml`) or "CODEOWNERS" (`codeowners.yaml`) since they're not well-enough documented upstream.
+We aren't using the policies for "Github Actions" (`actions.yaml`) or "CODEOWNERS" (`codeowners.yaml`) because they're not well-enough documented upstream for us to effectively deploy them.
 
 ## AllStar Administration
 
