@@ -10,6 +10,7 @@ optConfig:
   disableRepoOverride: false
   optOutStrategy: true
 issueLabel: allstar-gsa
-issueFooter: "Issue created by [GSA-TTS Allstar](https://github.com/gsa-tts/.allstar). See remediation hints in the [README](https://github.com/GSA-TTS/.allstar?tab=readme-ov-file#policy-configuration).
-
-
+issueFooter: >
+     Issue created by [GSA-TTS Allstar](https://github.com/gsa-tts/.allstar). See
+     remediation hints in the
+     [README](https://github.com/GSA-TTS/.allstar?tab=readme-ov-file#policy-configuration).
