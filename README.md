@@ -106,6 +106,10 @@ for code to reach `main`.
 Leverages [Scorecard](#scorecard) to detect dangerous
 GitHub Action use.
 
+**Remediation Hints**:
+
+* The upstream [Scorecard](https://github.com/ossf/scorecard) program is pretty extensively documented, so look there
+
 ### [Outside collaborators](outside.yaml)
 
 Controls how users outside of the organization can interact with repositories.
@@ -120,7 +124,12 @@ Controls how users outside of the organization can interact with repositories.
 * AC-3: Access Enforcement 
 * AC-14: Permitted Actions Without Identification or Authentication
 
+**Remediation Hints**:
+
+* In addition to the in-issue advice you can try changing the setting for `pushAllowed` or `adminAllowed`, see [this repo](https://github.com/GSA-TTS/federal-platform-engineering-cop/blob/main/.allstar/outside.yaml) for an example
+
 ### [Scorecard](scorecard.yaml)
+
 
 Runs [Scorecard](https://github.com/ossf/scorecard/) to detect and report a
 wide variety of problems. See the [default checks.yaml](https://github.com/ossf/scorecard/blob/main/docs/checks/internal/checks.yaml)
@@ -128,18 +137,24 @@ for current settings.
 
 As of May 2024, we have not enabled any default Scorecard checks across all repositories.
 
+**Remediation Hints**:
+
+* The upstream [Scorecard](https://github.com/ossf/scorecard) program is pretty extensively documented, so look there
+
 ### [SECURITY.md check](security.yaml)
 
 Each repository is required to have a security policy published as `SECURITY.md`.
 GSA developed open source software should be covered by the
 [GSA Vulnerability Disclosure Policy](https://gsa.gov/vulnerability-disclosure-policy).
 
-In most cases you should be able to use [SECURITY.md](./SECURITY.md) from this
-repo.
-
 **Compliance**:
 
 * RA-5(11): Vulnerability Monitoring and Scanning -- Public Disclosure Program
+
+**Remediation Hints**:
+
+* In most cases you should be able to use [SECURITY.md](./SECURITY.md) from this
+repo.
 
 ## Unimplemented checks
 
