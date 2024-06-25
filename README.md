@@ -37,10 +37,6 @@ These are the expected settings to be in compliance
 
 Sets the issue labels and issue footers for when AllStar creates issues.
 
-### [Action Restrictions](actions.yaml)
-
-We use the AllStar defaults, which reviews the workflow configuration files (in `.github/workflows`).
-
 ### [Admin Requirements](admin.yaml)
 
 |   |   |
@@ -127,6 +123,10 @@ repo.
 **Compliance**:
 
 * RA-5(11): Vulnerability Monitoring and Scanning -- Public Disclosure Program
+
+## Unimplemented checks
+
+We aren't using the policies for "Github Actions" (`actions.yaml`) or "CODEOWNERS" (`codeowners.yaml`) because they're not well-enough documented upstream for us to effectively deploy them.
 
 ## AllStar Administration
 
