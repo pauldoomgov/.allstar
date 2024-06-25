@@ -10,12 +10,3 @@ action: issue
 # Policies
 adminAllowed: false
 pushAllowed: false
-exemptions:
-  - user: Chris-Laurer
-    repo: federal-platform-engineering-cop
-    push: true
-    admin: false
-  - user: brianrandallfox
-    repo: federal-platform-engineering-cop
-    push: true
-    admin: false
