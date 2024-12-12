@@ -42,8 +42,7 @@ Sets the issue labels and issue footers for when AllStar creates issues.
 |   |   |
 | - | - |
 | Owner-less repositories allowed | false |
-| Individual users allowed to be admins | true |
-| Maximum individual admins users | 4 |
+| Individual users allowed to be admins | false |
 | Teams allowed to be admins | true |
 | Maximum admin teams | 2 |
 
@@ -121,7 +120,7 @@ Controls how users outside of the organization can interact with repositories.
 
 **Compliance**:
 
-* AC-3: Access Enforcement 
+* AC-3: Access Enforcement
 * AC-14: Permitted Actions Without Identification or Authentication
 
 **Remediation Hints**:
@@ -163,4 +162,3 @@ We aren't using the policies for "Github Actions" (`actions.yaml`) or "CODEOWNER
 ## AllStar Administration
 
 See [ADMIN.md](./ADMIN.md) if you are a GSA-TTS administrator managing AllStar.
-
