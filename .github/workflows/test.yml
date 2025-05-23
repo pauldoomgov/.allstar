@@ -1,7 +1,6 @@
 ---
 name: CI Tests
-on:
-  - pull_request
+on: push
 
 jobs:
   yamllint:
