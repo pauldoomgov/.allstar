@@ -27,7 +27,7 @@ jobs:
     # Use chainguard/busybox based image - It has a tail for entrypoint
     container:
       # specifying allstar by sha since tags are mutable. we don't verify the signature (see above)
-      image: ghcr.io/ossf/allstar@sha256:f2d3dcbb6eff6940164df8fc900211968e2f07def4248208eb86bfb16c642fcf # v4.4-busybox
+      image: ghcr.io/ossf/allstar@sha256:b9a32c3f54f3e96aa06003eb48acb9d4c32a70b5ec49bdc4f91b942b32b14969 # v4.1-busybox
       # Running as root within unprivileged container does not violate STIGs, etc.
       options: --user root
     environment: prod
@@ -47,7 +47,7 @@ jobs:
         run: |
           /ko-app/allstar -once > >(tee -a $ARTIFACT_DIR/allstar.out) 2> >(tee -a $ARTIFACT_DIR/allstar.log >&2);
       - name: Archive AllStar Results
-        uses: actions/upload-artifact@5d5d22a31266ced268874388b861e4b58bb5c2f3 # @4.3.1
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # @4.6.2
         with:
           name: allstar-scan
           path: ${{ env.ARTIFACT_DIR }}
@@ -102,7 +102,7 @@ jobs:
           SCAN_RESULTS_REPO=$(cat $ARTIFACT_DIR/scan_results_by_repo.json)
           echo "$SCAN_RESULTS_REPO" | jq -r '.[] | "\n<details>\n<summary>\(.repository) - Pass: \(.summary.pass_count), Fail: \(.summary.fail_count)</summary>\n\n| Pass Count | Fail Count | Passed | Failed |\n| --- | --- | --- | --- |\n| \(.summary.pass_count) | \(.summary.fail_count) | \(.summary.passed | join(", ")) | \(.summary.failed | join(", ")) |\n\n</details>\n"' >> $GITHUB_STEP_SUMMARY
       - name: Archive AllStar Results
-        uses: actions/upload-artifact@5d5d22a31266ced268874388b861e4b58bb5c2f3 # @4.3.1
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # @4.6.2
         with:
           name: allstar-results
           path: ${{ env.ARTIFACT_DIR }}
