@@ -9,6 +9,7 @@
 optConfig:
   disableRepoOverride: false
   optOutStrategy: true
+  optOutArchivedRepos: true
 issueLabel: allstar-gsa
 issueFooter: >
      Issue created by [GSA-TTS Allstar](https://github.com/gsa-tts/.allstar). See
