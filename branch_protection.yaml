@@ -14,7 +14,6 @@ blockForce: true
 dismissStale: true
 enforceDefault: true
 enforceOnAdmins: true
-optOutArchivedRepos: true
 requireApproval: true
 requireSignedCommits: true # SI-7
 requireUpToDateBranch: true
