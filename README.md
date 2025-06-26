@@ -11,14 +11,7 @@ AllStar is set to "complain mode" at this time and can not auto-remediate issues
 
 ## Enabled Repos
 
-AllStar is currently configured to scan all the repositories which
-it's authorized to access in the corresponding GitHub App, so repo updates
-require the GSA TTS DevTools team to update those permissions.
-
-If you have a repository in this organization that you would like added:
-
-* Open an issue requesting which repositories we should add
-* Once accepted and merged, check the `Issues` tab in your repository for AllStar's findings
+AllStar is currently configured to scan all of the repositories in the GSA-TTS organization. It will skip repostories that are archived.
 
 ### Overriding AllStar Defaults
 
