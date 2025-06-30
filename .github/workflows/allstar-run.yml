@@ -16,7 +16,8 @@ on:
     branches:
       - main
   schedule:
-    - cron: '0 */6 * * *'
+    # M-F at 6:00am UTC
+    - cron: '0 6 * * 1-5'
 
 env:
   ARTIFACT_DIR: /tmp/artifacts
