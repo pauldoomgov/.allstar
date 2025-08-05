@@ -1,6 +1,6 @@
-# Allstar configuration for GSA-TTS
+# Allstar configuration
 
-![AllStar Run](https://github.com/GSA-TTS/.allstar/actions/workflows/allstar-run.yml/badge.svg)
+![AllStar Run](https://github.com/pauldoomgov/.allstar/actions/workflows/allstar-run.yml/badge.svg)
 
 [Allstar](https://github.com/ossf/allstar) is a security-policy GitHub app. It is
 installed on this org, and this repo contains the configuration for that app. It
@@ -11,7 +11,7 @@ AllStar is set to "complain mode" at this time and can not auto-remediate issues
 
 ## Enabled Repos
 
-AllStar is currently configured to scan all of the repositories in the GSA-TTS organization. It will skip repostories that are archived.
+AllStar is currently configured to scan all of the repositories in the organization. It will skip repositories that are archived.
 
 ### Overriding AllStar Defaults
 
@@ -84,13 +84,13 @@ for code to reach `main`.
 
 **Compliance**:
 
-* AC-2 Access Control:  AllStar is ensuring branch protection is being enforced and requires peer review by at least one other team member for the production “main/master” branch. Scans, checks, and branch protection policies are enforced configurations through the GSA-TTS Github Allstar implementation.
+* AC-2 Access Control:  AllStar is ensuring branch protection is being enforced and requires peer review by at least one other team member for the production “main/master” branch. Scans, checks, and branch protection policies are enforced configurations through the Github Allstar implementation.
 * SI-7 Software, Firmware, and Information Integrity: Signed commits ensure code updates come from the approved set of contributors.
 
 **Remediation Hints**:
 
-* Follow GitHub's [Branch Protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches) guidance
-* If the org-wide settings aren't appropriate for your repository, override the settings in `(repository)/.allstar/branch_protection.yaml`, as in [this example for the Login handbook](https://github.com/GSA-TTS/identity-handbook/blob/main/.allstar/branch_protection.yaml)
+* Follow GitHub's [Branch Protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches) guidance.
+* If the org-wide settings aren't appropriate for your repository, override the settings in `(repository)/.allstar/branch_protection.yaml`.
 
 
 ### [Dangerous Action Workflows](dangerous_workflows.yaml)
@@ -154,4 +154,4 @@ We aren't using the policies for "Github Actions" (`actions.yaml`) or "CODEOWNER
 
 ## AllStar Administration
 
-See [ADMIN.md](./ADMIN.md) if you are a GSA-TTS administrator managing AllStar.
+See [ADMIN.md](./ADMIN.md) if you are a administrator managing AllStar.

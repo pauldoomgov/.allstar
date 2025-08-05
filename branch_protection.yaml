@@ -2,7 +2,7 @@
 # Implements AC-2 (part g):  requires peer review by at least
 #   one other team member for the production “main/master” branch.
 # AC-2 (part k): cans, checks, and branch protection policies are enforced
-#   configurations through the GSA-TTS Github Allstar implementation.
+#   configurations through the Allstar implementation.
 # SI-7 Software, Firmware, and Information Integrity
 optConfig:
   disableRepoOverride: false

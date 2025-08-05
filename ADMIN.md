@@ -1,8 +1,8 @@
-# GSA-TTS AllStar Administration
+# AllStar Administration
 
-This document is for owners of this (`.allstar`) repository and the GSA-TTS org.
+This document is for owners of this (`.allstar`) repository and the GitHub org.
 
-Developers working in the GSA-TTS org who wish to leverage AllStar should
+Developers working in the org who wish to leverage AllStar should
 check our [README.md](./README.md).
 
 ## OptIn / OptOut Strategy
@@ -16,7 +16,7 @@ updating the repository access settings.
 We also allow repository owners to override settings, `disableRepoOverride: false`,
 since code owners should be empowered to accept such risks.
 
-## GitHub App for AllStar - gsa-tts-allstar
+## GitHub App for AllStar
 
 An "App" is like a service account: It is a user-like thing with a set of
 permissions in your GitHub organization. Private key authentication can be used
@@ -27,15 +27,15 @@ for details on how to create a new App. Note the following important differences
 in our implementation:
 
 * We ONLY allow write access to `Issues` at this time. (Auto-remediation is off.)
-* Repository Access is opt-in only and the list of repositories that the `gsa-tts-allstar`
+* Repository Access is opt-in only and the list of repositories that the 
   App can manage is explicitly defined. (See [Giving AllStar Repository Access](#giving-the-allstar-app-repository-access))
-* When you create the `gsa-tts-allstar` app user make sure to record the `App ID` value
+* When you create the app user make sure to record the `App ID` value
 
-### gsa-tts-allstar private key
+### Private key
 
 To generate or replace the private key used by the AllStar action to authenticate
 with GitHub:
-* Navigate to https://github.com/organizations/GSA-TTS/settings/apps/gsa-tts-allstar
+* Navigate to `https://github.com/organizations/<ORGANIZATION>/settings/apps/<APP-NAME>`
 * Under "Private keys" click "Generate a private key"
 * Replace the GitHub Actions environment secret with the contents of the new one (See [Managing the Prod Deployment Environment](#managing-the-prod-deployment-environment))
 * Do not leave this key unprotected! Delete it immediately after updating
@@ -47,8 +47,8 @@ __Do not give AllStar full organization access!__
 
 To add a new opt-in repo:
 
-* As a [GSA-TTS owner](https://github.com/orgs/GSA-TTS/people?query=role%3Aowner),
-  navigate to [Settings -> GitHub Apps -> gsa-tts-allstar](https://github.com/organizations/GSA-TTS/settings/installations/40988991)
+* As an organization owner
+  navigate to Settings -> GitHub Apps -> <APP-NAME>
 * Under "Repository access" use the "Select repositories" drop down to add
   repos for AllStar to monitor
 * Click Save
@@ -63,18 +63,18 @@ organization.
 To protect secrets we utilize the deployment environment feature of GitHub
 Actions.
 
-* Under [Settings -> Environments](https://github.com/GSA-TTS/.allstar/settings/environments)
+* Under Settings -> Environments
   create the `prod` environment (if not already defined)
 * Uncheck "Allow administrators to bypass configured protection rules"
 * Under "Deployment branches" switch to "Selected Branches"
 * Click "Add deployment branch rule" and enter `main` then click "Add rule"
 * Under "Environment variables" click "Add variable"
   * Name: `APP_ID`
-  * Value: Enter the App ID for the `gsa-tts-allstar` app user (from [gsa-tts-allstar private key](#gsa-tts-allstar-private-key))
+  * Value: Enter the App ID for the app user
   * Click "Add variable" to complete
 * Under "Environment secrets" click "Add secret"
   * Name: `PRIVATE_KEY`
-  * Value: Paste the contents of the private key PEM downloaded in [gsa-tts-allstar private key](#gsa-tts-allstar-private-key)
+  * Value: Paste the contents of the private key PEM downloaded in [Private key](#private-key)
   * Click "Add secret" to complete
 * From this point, future AllStar GitHub Action runs on `main` should function.
 
@@ -96,15 +96,4 @@ To update:
   ~~~
 
 * Once reviewed and merged make sure to monitor the action under
-https://github.com/GSA-TTS/.allstar/actions and address any issues.
-
-## Running on cloud.gov
-
-Since AllStar is a standalone Go application, it would be feasible to migrate from GitHub Actions
-to cloud.gov. A cloud.gov installation would need the environment populated with the same variables
-currently in `allstar-run.yml`. With the APP_ID and PRIVATE_KEY the application would go
-ahead and follow the configuration for the application associated with this repository. The potential sticking points would be:
-
-* Running as a periodic task, perhaps leveraging a pattern using Supercronic, as at https://github.com/meshcloud/cf-cron
-* Saving artifacts -- perhaps using S3, or just forgoing artifacts entirely
-* Ensuring the PRIVATE_KEY is sufficiently protected
+  Actions and address any issues.

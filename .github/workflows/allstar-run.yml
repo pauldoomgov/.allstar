@@ -6,10 +6,7 @@
 # generated through GitHub Actions, not signed by one of the committers.
 # More: https://github.blog/2021-12-06-safeguard-container-signing-capability-actions/
 ---
-name: GSA-TTS AllStar Enforcement Action
-
-# See https://github.com/GSA-TTS/.allstar/blob/main/ADMIN.md for information
-# on setup and administration of this GitHub Action.
+name: AllStar Enforcement Action
 
 on:
   push:
