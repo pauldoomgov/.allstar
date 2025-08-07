@@ -41,10 +41,10 @@ jobs:
           KEY_SECRET: direct
           APP_ID: ${{ vars.APP_ID }}
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-        shell: bash
         # AllStar emits logs on stderr, not stdout
         run: |
-          /ko-app/allstar -once > >(tee -a $ARTIFACT_DIR/allstar.out) 2> >(tee -a $ARTIFACT_DIR/allstar.log >&2);
+          /ko-app/allstar -once 2> $ARTIFACT_DIR/allstar.log | tee $ARTIFACT_DIR/allstar.out
+          test -s $ARTIFACT_DIR/allstar.log && echo "==== Errors ====" && cat $ARTIFACT_DIR/allstar.log
       - name: Archive AllStar Results
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # @4.6.2
         with:
